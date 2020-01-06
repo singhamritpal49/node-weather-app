@@ -1,3 +1,4 @@
+
 const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')
 const weatherDiv = document.querySelector('.weatherInformation')
@@ -6,9 +7,9 @@ weatherForm.addEventListener('submit', (event) => {
 
     const location = search.value
 
-
-    fetch('/weather?address=' + location)
-        .then(res => res.json())
+    let url = `/weather?address=${location}`
+    fetch(url)
+        .then(response => response.json())
         .then(data => {
             if (data.error) {
                 weatherDiv.innerHTML = ` <p> ${data.error} </p>`
