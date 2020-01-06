@@ -6,9 +6,8 @@ weatherForm.addEventListener('submit', (event) => {
 
     const location = search.value
 
-    const url = `/weather?address=${location}`
 
-    fetch(url)
+    fetch('/weather?address=' + location)
         .then(res => res.json())
         .then(data => {
             if (data.error) {
