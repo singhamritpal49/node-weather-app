@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="icon" href="/img/weather.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Index</title>
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}}
+        <p> Enter City or State or Zip Code</p>
+        <form id="locationForm">
+                <input placeholder="Location" type="text" id=search >
+                <button>Search</button>
+        </form>
+        <div class="weatherInformation">
+
+        </div>
+    </div>
+    {{>footer}}
+</body>
+
+    <script src="./js/app.js">  </script>
+</html>
